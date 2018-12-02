@@ -7,8 +7,9 @@ ActivemqAT is an implementation of the AT Structures for the Apache ActiveMQ
 
 Steps to execute :
 
-1. export BRANCH_VERSION='version of Active MQ branch'
-2. mvn clean install -Dmaster
+1. (Build Active MQ in order to produce the Active MQ artifacts)
+2. export BRANCH_VERSION='version of Active MQ branch'
+3. mvn clean install -Dmaster
 
 ## License
 

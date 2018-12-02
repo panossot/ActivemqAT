@@ -1,4 +1,7 @@
-Activemq AT
+# Activemq AT
+
+## A PROJECT UNDER THE ΙΔΕΑ STATEMENT
+--------------------------------------
 
 ActivemqAT is an implementation of the AT Structures for the Apache ActiveMQ
 

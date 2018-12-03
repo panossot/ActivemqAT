@@ -19,7 +19,7 @@
     <packaging>pom</packaging>
     <version>1.0.0.Final-SNAPSHOT</version>
 
-    <name>jboss-modules additional testsuite: jboss-modules additional testsuite modules</name>
+    <name>activemq additional testsuite: activemq additional testsuite modules</name>
     
     <properties>
         <version.junit>4.11</version.junit>
@@ -30,7 +30,7 @@
     <profiles>
 
         <profile>
-            <id>jboss.modules.master.testsuite</id>
+            <id>activemq.master.testsuite</id>
             <activation>
                 <property>
                     <name>master</name>

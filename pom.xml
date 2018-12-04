@@ -178,7 +178,7 @@
                       <argument>${basedir}</argument>
 		       <argument>${basedir}/modules/src/test/java</argument>
                        <argument>${serverDir2}</argument>
-                       <argument>${BRANCH_VERSION}</argument>
+                       <argument>${ACTIVEMQ_BRANCH_VERSION}</argument>
                        <argument>versionOrder</argument>
                        <argument></argument>
                        <argument></argument>

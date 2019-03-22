@@ -29,6 +29,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.Assert.*;
 import org.jboss.eap.additional.testsuite.annotations.EapAdditionalTestsuite;
+import org.jboss.eap.additional.testsuite.annotations.ATTest;
+import org.jboss.eap.additional.testsuite.annotations.EATDPM;
 
 @EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java"})
 public class PublishedAddressPolicyTest {
@@ -54,7 +56,8 @@ public class PublishedAddressPolicyTest {
         assertTrue("contains bob", underTest.getPublishableConnectString(dummyTransportConnector).contains("bob"));
     }
 
-    @Test
+    @ATTest({"modules/testcases/jdkAll/master/activemq/src/main/java#5.15.0"})
+    @EATDPM(excludeDependencies={"none"})
     public void testHostMap() throws Exception {
         HashMap<String, String> hostMap = new HashMap<>();
         hostMap.put("bob", "pat");
@@ -62,11 +65,14 @@ public class PublishedAddressPolicyTest {
         assertTrue("contains pat", underTest.getPublishableConnectString(dummyTransportConnector).contains("pat"));
     }
 
-    @Test
+
+    @ATTest({"modules/testcases/jdkAll/master/activemq/src/main/java#5.15.0"})
+    @EATDPM(excludeDependencies={"none"})
     public void testPortMap() throws Exception {
         Map<Integer, Integer> portMap = new HashMap<Integer, Integer>();
         portMap.put(88, 77);
         underTest.setPortMapping(portMap);
         assertTrue("contains 77", underTest.getPublishableConnectString(dummyTransportConnector).contains("77"));
     }
+
 }

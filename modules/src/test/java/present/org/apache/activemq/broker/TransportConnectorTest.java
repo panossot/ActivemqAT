@@ -24,6 +24,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import org.jboss.eap.additional.testsuite.annotations.EapAdditionalTestsuite;
+import org.jboss.eap.additional.testsuite.annotations.ATTest;
 
 @EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java"})
 public class TransportConnectorTest {
@@ -36,7 +37,7 @@ public class TransportConnectorTest {
         underTest.setBrokerService(new BrokerService());
     }
 
-    @Test
+    @ATTest({"modules/testcases/jdkAll/master/activemq/src/main/java#5.16.0"})
     public void addPeerBrokerWithFilter() throws Exception {
         underTest.setUpdateClusterFilter("e.*,w.*");
 

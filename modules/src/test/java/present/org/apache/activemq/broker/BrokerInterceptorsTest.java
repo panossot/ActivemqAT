@@ -22,7 +22,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import org.jboss.eap.additional.testsuite.annotations.EapAdditionalTestsuite;
 
-@EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java"})
+@EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java#5.15.0"})
 public class BrokerInterceptorsTest {
 
     private BrokerService brokerService;

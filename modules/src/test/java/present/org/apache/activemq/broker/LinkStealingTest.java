@@ -35,6 +35,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.jboss.eap.additional.testsuite.annotations.EapAdditionalTestsuite;
+import org.jboss.eap.additional.testsuite.annotations.ATTest;
 
 @EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java"})
 public class LinkStealingTest {
@@ -93,7 +94,7 @@ public class LinkStealingTest {
         }
     }
 
-    @Test(timeout = 60000)
+    @ATTest({"modules/testcases/jdkAll/master/activemq/src/main/java#5.12.0"})
     public void testStealLinkSuccess() throws Exception {
         final String clientID = "ThisIsAClientId";
         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(stealableConnectionURI);

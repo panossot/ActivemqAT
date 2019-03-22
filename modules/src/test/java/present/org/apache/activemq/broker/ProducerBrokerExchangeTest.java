@@ -20,11 +20,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import org.jboss.eap.additional.testsuite.annotations.EapAdditionalTestsuite;
+import org.jboss.eap.additional.testsuite.annotations.ATTest;
 
 @EapAdditionalTestsuite({"modules/testcases/jdkAll/master/activemq/src/main/java"})
 public class ProducerBrokerExchangeTest {
 
-    @Test
+    @ATTest({"modules/testcases/jdkAll/master/activemq/src/main/java#5.16.0"})
     public void testGetPercentageBlockedHandlesDivideByZero(){
         ProducerBrokerExchange producerBrokerExchange = new ProducerBrokerExchange();
         producerBrokerExchange.getPercentageBlocked();
